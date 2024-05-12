@@ -148,7 +148,7 @@ class ResNet(nn.Module):
         return x
 
 
-def resnet18(weights=False, **kwargs):
+def resnet18(weights=None, **kwargs):
     """Constructs a ResNet-18 model.
 
     Args:
@@ -162,7 +162,7 @@ def resnet18(weights=False, **kwargs):
 
 if __name__ == '__main__':
 
-    model = resnet18(weights=False)
+    model = resnet18(weights=None)
     img = torch.rand(10, 3, 300, 25)*255
     # target = torch.randint(1, 20, (5, 5))
     print(model)
