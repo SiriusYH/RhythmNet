@@ -148,21 +148,21 @@ class ResNet(nn.Module):
         return x
 
 
-def resnet18(pretrained=False, **kwargs):
+def resnet18(weights=False, **kwargs):
     """Constructs a ResNet-18 model.
 
     Args:
-        pretrained (bool): If True, returns a model pre-trained on ImageNet
+        weights (bool): If True, returns a model pre-trained on ImageNet
     """
     model = ResNet(BasicBlock, [1, 1, 1, 1], **kwargs)
-    # if pretrained:
+    # if weights:
     #     model.load_state_dict(model_zoo.load_url(model_urls['resnet18']))
     return model
 
 
 if __name__ == '__main__':
 
-    model = resnet18(pretrained=False)
+    model = resnet18(weights=False)
     img = torch.rand(10, 3, 300, 25)*255
     # target = torch.randint(1, 20, (5, 5))
     print(model)
