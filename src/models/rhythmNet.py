@@ -79,5 +79,5 @@ if __name__ == '__main__':
     # target = torch.randint(1, 20, (5, 5))
     # x = cm(img)
     # print(x)
-    resnet18 = models.resnet18(weights=False)
+    resnet18 = models.resnet18(weights=None)
     print(resnet18)
