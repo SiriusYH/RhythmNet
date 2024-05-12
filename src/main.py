@@ -84,7 +84,7 @@ def run_training():
 
     optimizer = torch.optim.Adam(model.parameters(), lr=config.lr)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, factor=0.8, patience=5, verbose=True
+        optimizer, factor=0.8, patience=5
     )
     # loss_fn = nn.L1Loss()
     loss_fn = RhythmNetLoss()
