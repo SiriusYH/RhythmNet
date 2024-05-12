@@ -233,7 +233,7 @@ def preprocess_video_to_st_maps(video_path, output_shape, clip_size):
            Step 3: Downsample the face cropped frame to output_shape = 36x36
        '''
         faces = detector.detectMultiScale(frame, 1.3, 5)
-        if len(faces) is not 0:
+        if len(faces) != 0:
             (x, y, w, d) = faces[0]
             frame_cropped = frame[y:(y + d), x:(x + w)]
             eyes = eye_detector.detectMultiScale(frame_cropped, 1.2, 3)
