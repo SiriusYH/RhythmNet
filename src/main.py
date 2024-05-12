@@ -16,7 +16,7 @@ from models.simpleCNN import SimpleCNN
 from models.lenet import LeNet
 from models.rhythmNet import RhythmNet
 from loss_func.rhythmnet_loss import RhythmNetLoss
-from scipy.stats.stats import pearsonr
+from scipy.stats import pearsonr
 
 
 # Needed in VIPL dataset where each data item has a different number of frames/maps
