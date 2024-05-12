@@ -17,8 +17,8 @@ class RhythmNet(nn.Module):
         super(RhythmNet, self).__init__()
 
         # resnet o/p -> bs x 1000
-        # self.resnet18 = resnet18(weights=False)
-        resnet = models.resnet18(weights=False)
+        # self.resnet18 = resnet18(weights=None)
+        resnet = models.resnet18(weights=None)
         modules = list(resnet.children())[:-1]
 
         self.resnet18 = nn.Sequential(*modules)
