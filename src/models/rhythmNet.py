@@ -17,8 +17,8 @@ class RhythmNet(nn.Module):
         super(RhythmNet, self).__init__()
 
         # resnet o/p -> bs x 1000
-        # self.resnet18 = resnet18(pretrained=False)
-        resnet = models.resnet18(pretrained=False)
+        # self.resnet18 = resnet18(weights=False)
+        resnet = models.resnet18(weights=False)
         modules = list(resnet.children())[:-1]
 
         self.resnet18 = nn.Sequential(*modules)
@@ -79,5 +79,5 @@ if __name__ == '__main__':
     # target = torch.randint(1, 20, (5, 5))
     # x = cm(img)
     # print(x)
-    resnet18 = models.resnet18(pretrained=False)
+    resnet18 = models.resnet18(weights=False)
     print(resnet18)
